@@ -20,6 +20,7 @@
             font-style: normal white;
             font-family: monospace;
             color: white;
+            text-align: center;
 
         }
 
@@ -28,6 +29,8 @@
             border: 1.7px solid rgb(227, 158, 176);
             padding: 2px;
             font-family: monospace;
+            text-align: center;
+
 
 
         }
@@ -35,6 +38,8 @@
         caption {
             font-family: monospace;
             font-size: x-large;
+            text-align: center;
+
         }
     </style>
     <title> Página de ejemplo</title>
@@ -43,7 +48,7 @@
 
 <body>
     <table>
-        <caption>ESTE ES EL TÍTULO DE LA TABLA 1</caption>
+        <caption>ESTE ES EL TÍTULO DE LA TABLA 2</caption>
         <tr>
             <th>City</th>
             <th>Date</th>
@@ -92,13 +97,20 @@
             <td>7,289</td>
             <td>5/5</td>
         </tr>
+        <!-- PARA CAMBIAR NUMERO DE CELDAS DE UNA LÍNEA -->
         <tr>
-            <td>Why, AZ</td>
-            <td>August 18th</td>
-            <td>104</td>
-            <td>860 ft</td>
-            <td>480</td>
-            <td>3/5</td>
+            <td rowspan="2">Why, AZ</td>
+            <td class="center">August 18th</td>
+            <td class="center">104</td>
+            <td rowspan="2" class="right">860 ft</td>
+            <td rowspan="2" class="right">480</td>
+            <td class="center">3/5</td>
+        </tr>
+        <tr>
+            <td class="center">August 27th</td>
+            <td class="center">198</td>
+
+            <td class="center">4/5</td>
         </tr>
     </table>
 </body>
