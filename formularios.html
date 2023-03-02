@@ -13,67 +13,154 @@
     <meta name="author" content="Naomi Elvira" />
     <title> Página de ejemplo</title>
 
+    <style>
+        button {
+            background: url(gatito.webp) no-repeat center center;
+
+            box-shadow:
+                0 0 0px rgb(140, 67, 67),
+                0 0 10px rgb(140, 108, 192),
+                0 0 21px rgb(207, 185, 231),
+                0 0 42px rgb(210, 194, 241),
+                0 0 82px rgb(255, 255, 255),
+                0 0 92px rgb(235, 230, 243),
+                0 0 102px rgb(255, 255, 255),
+                0 0 151px rgb(255, 255, 255);
+            ;
+            background-size: contain;
+            background-color: Transparent;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: absolute;
+            outline: none;
+            width: 40px;
+            height: 40px;
+            right: 50px;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <forms>
-        <label for="nombre">
-            NOMBRE: <input type=" text" name="nombre" id="nombre" required />
-        </label>
-        <br>
-        <label for="apellidos">
-            APELLIDO: <input type=" text" name="apellido" id="apellido" size="89"
-                placejolders="apellido por defecto " />
-        </label>
-        <br>
-        <label>
-            PASSWORD: <input type=" text" name="apellido" id="password" size="12" minlength="6" maxlength="12" />
-        </label>
-        <br>
-        <label>
-            EDAD: <input type="number" name="number" min="0" max="120" step="2" />
-        </label>
-        <br>
-        <p>
-            <label>
-                FECHA Y HORA LOCAL: <input type="datetime-local" name="datetimelocal" />
+        <fieldset>
+
+            <legend>Forms </legend>
+
+            <label for="opiniion">
+                Name <input type=" text" name="nombre" id="nombre" required />
             </label>
-        </p>
-        <br>
-        <p>
+            <br>
+            <label for="apellidos">
+                Last name <input type=" text" name="apellido" id="apellido" size="89"
+                    placejolders="apellido por defecto " />
+            </label>
+            <br>
             <label>
-                FECHA DE NACIMIENTO: <input type="date" name="dateBirth" max="27/01/23" />
+                Password <input type=" text" name="apellido" id="password" size="12" minlength="6" maxlength="12" />
+            </label>
+            <br>
+            <label>
+                Age <input type="number" name="number" min="0" max="120" step="2" />
+            </label>
+            <br>
+            <p>
+                <label>
+                    Local date and time <input type="datetime-local" name="datetimelocal" />
+                </label>
+            </p>
+            <br>
+            <p>
+                <label>
+                    Birthdate <input type="date" name="dateBirth" max="27/01/23" />
+                </label>
+
+            </p>
+            <br>
+            <p>
+                <label>
+                    Gender: <br>
+                </label>
+
+                <label for="">
+                    Man <input type="radio" name="sexo" value="H" />
+
+                </label>
+
+                <label>
+                    <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
+                    Woman <input type="radio" name="sexo" value="M" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="file" name="file" accept="image/*" multiple>
+                </label>
+            </p>
+        </fieldset>
+        <p>
+            <label> Opinion <br>
+                <textarea name="opinion" id="opinion" cols="30" rows="10" placeholder="Type here">
+
+
+                </textarea>
+
             </label>
 
+
         </p>
-        <br>
+
         <p>
-            <label>
-                SEXO:
-            </label>
-
-            <label for="">
-                Hombre <input type="radio" name="sexo" value="H" />
-
-            </label>
-
-            <label>
-                <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
-                Mujer <input type="radio" name="sexo" value="M" checked />
+            <label>Country:
+                <select name="country" id="country">
+                    <option value=""> Choose country</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Japan">Japan</option>
+                    <option value="South Korea">South Korea</option>
+                </select>
             </label>
         </p>
         <p>
-            <label>
-                <input type="file" name="file" accept="image/*" multiple>
+        </p>
+
+        <p>
+            <label>Country:
+                <select name="country2" id="country2">
+                    <option value=""> &nbsp;</option>
+                    <optgroup label="Favorite countries">
+                        <option value="Spain" disabled>Spain</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Japan">Japan</option>
+                        <option value="South Korea">South Korea</option>
+                    </optgroup>
+                    <optgroup label="Other countries">
+
+                        <option value="Japan">Japan</option>
+                        <option value="South Korea">South Korea</option>
+                    </optgroup>
+                </select>
             </label>
         </p>
+
+
         <p>
+        <fieldset>
+            <legend> Buttons </legend>
             <input type="submit" name="submit" value="SUBMIT">
             <input type="reset" name="reset" value="RESET">
-            <input type="button" name="button" value="BUTTON">
+            <input type="button" name="button1" value="BUTTON">
+            <input type="button" name="button2" value="BUTTON">
+            <input type="button" name="button3" value="BUTTON">
+
+        </fieldset>
         </p>
-        <br>
+
+        <button class="gatito">
+
+        </button>
 
 
 

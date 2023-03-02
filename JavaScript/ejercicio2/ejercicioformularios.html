@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Ejercicio 1" />
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular, Programación en Angular, Ejercicio 1">
+    <meta name="author" content="Naomi Elvira" />
+    <title> Hoteles El Paraíso</title>
+    <style>
+        body {
+            background-color: rgb(234, 224, 253);
+        }
+
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: right;
+            color: rgb(255, 255, 255);
+        }
+
+        .neonText {
+            font-weight: bold;
+            filter: blur(0.03px);
+            text-shadow:
+                0 0 0px rgb(140, 67, 67),
+                0 0 10px rgb(140, 108, 192),
+                0 0 21px rgb(207, 185, 231),
+                0 0 42px rgb(210, 194, 241),
+                0 0 82px rgb(255, 255, 255),
+                0 0 92px rgb(235, 230, 243),
+                0 0 102px rgb(255, 255, 255),
+                0 0 151px rgb(255, 255, 255);
+        }
+
+
+        h3 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+        }
+
+        label {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            flex-direction: row;
+            justify-content: flex-end;
+            text-align: left;
+            width: 400px;
+            line-height: 26px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: url(send2.jpeg) no-repeat center center;
+           
+            box-shadow: 
+                0 0 0px rgb(140, 67, 67),
+                0 0 10px rgb(140, 108, 192),
+                0 0 21px rgb(207, 185, 231),
+                0 0 42px rgb(210, 194, 241),
+                0 0 82px rgb(255, 255, 255),
+                0 0 92px rgb(235, 230, 243),
+                0 0 102px rgb(255, 255, 255),
+                0 0 151px rgb(255, 255, 255);;
+            background-size: contain;
+            background-color: Transparent;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: absolute;
+            outline: none;
+            width: 40px;
+            height: 40px;
+            right: 50px;
+        }
+    </style>
+ 
+</head>
+
+<body>
+    <div class="neonText">
+        <h1>Hoteles El Paraíso</h1>
+    </div><br>
+    <h3> Sistema de reserva de habitaciones:</h3>
+
+    <forms>
+        <label for="nombre">
+            Introduzca su nombre: <input type=" text" name="nombre" id="nombre" required />
+        </label>
+        <br>
+        <label>
+            Introduzca una clave para su identificación (4 letras): <input type=" text" name="apellido" id="password"
+                size="4" minlength="4" maxlength="4" required />
+        </label>
+        <br>
+        <p>
+            <label>
+                Tipo de habitación
+            </label>
+            <br>
+
+            <label for="Individual">
+                Individual <input type="radio" name="individual" value="individual" />
+
+            </label>
+            <br>
+            <label>
+                <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
+                Doble <input type="radio" name="doble" value="doble" />
+            </label>
+            <br>
+            <label>
+                Opciones extra:
+            </label>
+            <br>
+
+            <label for="Desayuno">
+                Desayuno en cama <input type="checkbox" name="individual" value="individual" />
+
+            </label>
+
+            <label>
+                <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
+                Jacuzzi <input type="checkbox" name="doble" value="doble" />
+            </label>
+            <label>
+                <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
+                Climatizador <input type="checkbox" name="doble" value="doble" />
+            </label>
+            <br>
+
+            <button style="width: 60px; height: 60px;">
+
+            </button>
+        </p>
+        <br>
+
+
+
+
+
+
+    </forms>
+</body>
+
+</html>

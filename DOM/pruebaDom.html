@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <!--ETIQUETAS OBLIGATORIAS----------->
+    <meta charset="utf-8" />
+    <!--ADAPTACION A MOVIL, DESKTOP...-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--ETIQUETAS ADAPTABLES PARA AYUDAR AL SEO, BUSQUEDAS EN WEB------------->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular, Programación en Angular">
+    <meta name="author" content="Naomi Elvira" />
+    <title> Página de ejemplo</title>
+
+</head>
+
+<body>
+
+
+    <h1> TITULO</h1>
+    <p id="p1">PARRAFO 1 </p>
+    <p name="p2">PARRAFO 2 </p>
+    <p class="parrafos">PARRAFO 3 </p>
+    <p class="parrafos">PARRAFO 4 </p>
+    <script>
+
+        let madre = document.documentElement;
+        console.log(madre.lang);
+        madre.lang = "en";
+        let cabecera = document.head;
+        console.log(cabecera.nodeName);
+        let cuerpo = document.body;
+        console.log(cuerpo.nodeName)
+        let p1 = document.getElementById("p1");
+        console.log(p1.nodeName)
+let pclass = document.getElementsByClassName("parrafos"); //siempre devuelve un array de nodos elementSSSSS
+let p3 = pclass[0];
+let p4 = pclass[1];
+let parrafosName = document.getElementByName("p2");
+let p2=parrafosName[0];
+
+let titulos = document.getElementsByTagName("h1");
+let titulo1 = titulos[0];
+console.log(titulo1.nodeName);
+
+
+    </script>
+</body>
+
+</html>

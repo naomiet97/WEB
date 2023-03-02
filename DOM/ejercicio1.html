@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <!--ETIQUETAS OBLIGATORIAS----------->
+    <meta charset="utf-8" />
+    <!--ADAPTACION A MOVIL, DESKTOP...-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--ETIQUETAS ADAPTABLES PARA AYUDAR AL SEO, BUSQUEDAS EN WEB------------->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular, Programación en Angular">
+    <meta name="author" content="Naomi Elvira" />
+    <title> Página de ejemplo</title>
+
+    <script>
+        window.onload = function () {
+            let title = document.querySelector("h1");
+            title.onclick = borrarParrafo;
+        }
+
+        function borrarParrafo() {
+            let paragraph = document.getElementsByTagName("p");
+            if (paragraph.length > 0)
+                alert("no hay parrafos a eliminar");
+            else {
+                let ultimoParrafo = paragraph[paragraph.length - 1];
+                ultimoParrafo.parentNode.removeChild("paragraph");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <h1> TITULO</h1>
+    <p>PARRAFO 1 </p>
+    <p>PARRAFO 2 </p>
+    <p>PARRAFO 3 </p>
+    <p>PARRAFO 4 </p>
+
+
+
+</body>
+
+</html>

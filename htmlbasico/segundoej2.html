@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <!--ETIQUETAS OBLIGATORIAS----------->
+    <meta charset="utf-8" />
+    <!--ADAPTACION A MOVIL, DESKTOP...-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--ETIQUETAS ADAPTABLES PARA AYUDAR AL SEO, BUSQUEDAS EN WEB------------->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular, Programación en Angular">
+    <meta name="author" content="Naomi Elvira" />
+    <title> Página de ejemplo</title>
+
+    <style>
+        button {
+            background: url(gatito.webp) no-repeat center center;
+
+            box-shadow:
+                0 0 0px rgb(140, 67, 67),
+                0 0 10px rgb(140, 108, 192),
+                0 0 21px rgb(207, 185, 231),
+                0 0 42px rgb(210, 194, 241),
+                0 0 82px rgb(255, 255, 255),
+                0 0 92px rgb(235, 230, 243),
+                0 0 102px rgb(255, 255, 255),
+                0 0 151px rgb(255, 255, 255);
+            ;
+            background-size: contain;
+            background-color: Transparent;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: absolute;
+            outline: none;
+            width: 40px;
+            height: 40px;
+            right: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+
+        const parameters = new URLSearchParams(window.location.search);
+        parameters.forEach(e => { console.log(e) });
+        document.body.innerHTML = "<h1>Hola: " + parameters.get('nombre') + "<h1><br>"
+        document.body.innerHTML += "<h2> Se ha gastado usted: " + parameters.get('precio') + " euros</h2>"
+    </script>
+</body>
+
+</html>

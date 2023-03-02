@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <!--ETIQUETAS OBLIGATORIAS----------->
+    <meta charset="utf-8" />
+    <!--ADAPTACION A MOVIL, DESKTOP...-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--ETIQUETAS ADAPTABLES PARA AYUDAR AL SEO, BUSQUEDAS EN WEB------------->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular, Programación en Angular">
+    <meta name="author" content="Naomi Elvira" />
+    <title> Página de ejemplo</title>
+
+    <script>
+        /*
+    1) Pedir al usuario cantidad
+    2) Crear un desplegable con tantos option como el numero que ha dado.
+        Elemento 1... Elemento N
+    3) Crear tanto RADIOBUTTON como elemento tambiÃ©n
+    4) Si cambias el valor del radio, se cambie el desplegable y viceversa
+
+    */
+
+    function cambiarRadio() {
+        console.log("input[value='"+this.value+"']");
+        document.querySelector("input[value='"+this.value+"']").checked=true;
+    }
+
+    function cambiarDesplegable() {
+        document.getElementById("desplegable").value=this.value;
+    }
+
+    window.onload = function () {
+        let cantidad;
+        do{
+            cantidad =+ prompt("Dame la cantidad de opciones");
+        } while (isNaN(cantidad) || cantidad == "" || cantidad<1);
+
+        let desplegable = document.createElement("select");
+        desplegable.id = "desplegable";
+        desplegable.style.display = "block";
+        desplegable.style.marginBottom = "20px";
+        desplegable.onchange = cambiarRadio;
+        let opt,texto;
+        for(let i = 1; i <= cantidad; i++) {
+            opt = document.createElement("option");
+            opt.value = "valor"+i;
+            //opt.setAttribute("value","e"+1)
+            texto = document.createTextNode("Elemento "+i);
+            opt.appendChild(texto);
+            desplegable.appendChild(opt);
+
+        }
+        document.body.appendChild(desplegable)
+        /*let br = document.createElement("br");
+        document.body.appendChild(br);
+        br = document.createElement("br");
+        document.body.appendChild(br);
+        br = document.createElement("br");
+        document.body.appendChild(br);*/
+
+        let label,texto2,input
+        for(let i = 1; i <= cantidad; i++) {
+            label = document.createElement("label");
+
+            texto2 = document.createTextNode("Elemento "+i);
+            label.appendChild(texto2);  // Meto el texto dentro del label
+
+            input = document.createElement("input");
+            input.type = "radio";
+            //input.name = "radioButton";
+            input.onclick=cambiarDesplegable;
+            input.setAttribute("name", "radioButton");
+            input.value = "valor"+i;
+            label.appendChild(input);   // Meto el input dentro del label
+            document.body.appendChild(label);   // Meto el label dentro del body en el html
+        } 
+
+    }
+                </script>
+</head>
+
+<body>
+
+
+    <h1> TITULO</h1>
+    <p>PARRAFO 1 </p>
+    <p>PARRAFO 2 </p>
+    <p>PARRAFO 3 </p>
+    <p>PARRAFO 4 </p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: rgb(109, 150, 188);
+    outline: none;
+    text-align: center;
+}
+
+h1:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    color: rgba(189, 216, 239, 0.809)
+}
+
+p {
+    text-transform: uppercase;
+
+    font-family: 'Gambetta', serif;
+    color: rgb(226, 231, 243);
+    text-align: left;
+}
+
+a:link {
+    text-transform: uppercase;
+
+    font-family: 'Gambetta', serif;
+    color: rgb(59, 77, 114);
+}
+
+a:visited {
+    font-family: 'Gambetta', serif;
+    color: rgba(115, 164, 208, 0.799);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+* { /*cosas universales de la pagina, fuentes, etc. Es lo que tiene menos prioridad de todo*/
+    box-sizing: border-box;
+
+}
+
+.bg-image {
+    background-image: url("images/coast2.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(3px);
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.589);
+    /* Black w/opacity/see-through */
+    color: white;
+    border: 1px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    box-sizing: content-box;
+    
+}
+
+
+.lista-con-cuadrados {
+    list-style-type: square;
+    text-transform: uppercase;
+
+    font-family: 'Gambetta', serif;
+    color: rgb(226, 231, 243);
+    text-align: left;
+}
+
+.lista-con-circulos {
+    list-style-type: circle;
+    text-transform: uppercase;
+
+    font-family: 'Gambetta', serif;
+    color: rgb(226, 231, 243);
+    text-align: left;
+}
+
+.elementos_azules {
+    color: rgb(109, 150, 188);
+
+
+}
+
+.lista_none {
+    list-style: none;
+    color: rgb(147, 189, 228);
+}
+
+.lista_circle {
+    list-style: circle;
+    color: rgb(56, 122, 184);
+
+
+}
+
+.lista_disc {
+
+    list-style: disc;
+    color: rgb(57, 142, 221);
+
+}
+
+.lista_square {
+
+    list-style: square;
+    color: rgb(25, 133, 234);
+
+}
+
+.lista_roman {
+    color: rgb(147, 189, 228);
+    font-size: 23px;
+
+    list-style-type: upper-roman;
+    list-style-position: inside;
+
+}
+
+.lista_greek {
+    color: rgb(56, 122, 184);
+    font-size: 25px;
+
+    list-style-type: lower-greek;
+    list-style-position: inside;
+
+}
+
+.lista_lower_alpha {
+    color: rgb(57, 142, 221);
+    font-size: 27px;
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+
+}
+
+.lista_upper_alpha {
+    color: rgb(25, 133, 234);
+    font-size: 30px;
+    list-style-type: upper-alpha;
+    list-style-position: inside;
+
+
+}
+
+#unh2concreto{
+    font-size: 40px;
+    color: rgb(30, 79, 140);
+    text-shadow: 5 3 30px #142b4f
+}
+
+ol li{
+    font-size: 20px;
+}
+ul li{
+    font-size: 30px;
+}

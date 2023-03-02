@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <!--ETIQUETAS OBLIGATORIAS----------->
+    <meta charset="utf-8" />
+    <!--ADAPTACION A MOVIL, DESKTOP...-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--ETIQUETAS ADAPTABLES PARA AYUDAR AL SEO, BUSQUEDAS EN WEB------------->
+    <meta name="description" content="Mi primera página web" />
+    <meta name="keywords" content="Html, Css, JavaScript, TypeScript, Angular, Programación en Angular">
+    <meta name="author" content="Naomi Elvira" />
+    <title> Página de ejemplo</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <h1> Ejercicio 2</h1>
+    <form action="segundoej2.html" method="get" target="_blank">
+        <fieldset>
+
+            <legend>Basic information </legend>
+
+            <label for="name">
+                Name <input type=" text" name="nombre" id="nombre" required />
+            </label>
+            <br>
+            <p> <label> Description </label>
+            </p>
+            <textarea name="descripcion" cols="30" rows="10" placeholder="Type here">
+            </textarea>
+            <p>
+                <label>
+                    Images <input type=" text" name="images" id="images" />
+                    <input type="file" name="file" accept="image/*" multiple>
+                </label>
+            </p>
+            <p>
+
+                <label>
+                    <input type="checkbox" /> Number of visits
+
+                </label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Economic information </legend>
+
+
+            <p>
+
+
+                <label for="price">
+                    Price <input type=" text" name="apellido" id="apellido" size="5" />
+                    &euro;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+
+                </label>
+
+                <label>Taxes:
+                    <select name="taxes" id="taxes">
+                        <option value="4%">4%</option>
+                        <option value="7%">7%</option>
+                        <option value="16%">16%</option>
+                        <option value="25%">25%</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Coupons: <br>
+                </label>
+
+                <label for="">
+                    <input type="radio" name="coupons" value="N" /> None
+
+                </label>
+                <br>
+                <label>
+                    <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
+                    <input type="radio" name="coupons" value="F" /> Free transporation
+                </label>
+                <br>
+                <label>
+                    <!-- PARA VALORES POR DEFECTO, HAY QUE PONER checked -->
+                    <input type="radio" name="coupons" value="Desayuno" /> 5% Discount
+                </label>
+            </p>
+            <input type="submit" value="2a pantalla">
+<p>
+            <a href="http://www.google.com" ></a>
+        </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
