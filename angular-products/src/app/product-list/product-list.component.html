@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    {{ titulo }}
+  </div>
+  <label>Estilo1<input type="radio" name="estilos" value="estilo1" (click)="cambiarEstilo()"></label>
+  <label>Estilo2<input type="radio" name="estilos" value="estilo2" (click)="cambiarEstilo()"></label>
+
+  <div class="card-block">
+    <form class="form">
+      <div class="form-group row">
+        <label class="col-form-label col-sm-2 text-sm-right" for="filterDesc">Filtro:</label>
+        <div class="col-sm-5">
+          <input type="text" [(ngModel)]="filterSearch" class="form-control" name="filterDesc" id="filterDesc"
+            placeholder="Filter...">
+        </div>
+        <label class="col-form-label col-sm-5">
+          Filtrando por: {{filterSearch}}</label>
+      </div>
+    </form>
+    <div *ngIf="productos && productos.length">
+      <div class="row headers no-gutters">
+        <div class="col-2">
+          <button class="btn btn-sm" [ngClass]="{'btn-danger': showImage, 'btn-primary':!showImage}" (click)="toggleImage()">
+            {{showImage?'Hide':'Show'}} images
+          </button>
+        </div>
+        <div class="col-4">{{cabeceras.descripcion}}</div>
+        <div class="col">{{cabeceras.precio}}</div>
+        <div class="col">{{cabeceras.avail}}</div>
+        <div class="col">{{cabeceras.rating}}</div>
+      </div>
+      <product-item class="row no-gutters"
+      [productoHijo]="product" [mostrarImagen]="showImage"
+      [quieroEstilo1]="quieroEstilo1" [quieroEstilo2]="quieroEstilo2"
+      *ngFor="let product of productos | productFilter:filterSearch">
+      </product-item>
+    </div>
+  </div>
+</div>

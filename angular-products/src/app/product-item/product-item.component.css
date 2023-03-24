@@ -1,0 +1,19 @@
+div:first-child img {
+  height: 40px;
+}
+div:not(:first-child) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.estilo1{
+  color:white;
+  background-color: rgb(255, 202, 221);
+  font-size: 2em;
+  border-radius: 4px;
+}
+
+.estilo2{
+  color:yellow;
+  font-size:3em;
+}

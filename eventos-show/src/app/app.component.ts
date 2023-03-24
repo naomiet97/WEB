@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pepito:string = 'PROYECTO EOI';
-
-
+  title = 'Angular Eventos';
 }
