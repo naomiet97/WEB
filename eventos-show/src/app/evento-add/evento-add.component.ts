@@ -5,41 +5,43 @@ import { EventosService } from '../servicios/eventos.service';
 @Component({
   selector: 'evento-add',
   templateUrl: './evento-add.component.html',
-  styleUrls: ['./evento-add.component.css'],
+  styleUrls: ['./evento-add.component.css']
 })
 export class EventoAddComponent implements OnInit {
+
   ngOnInit(): void {
     this.inicializarEvento();
   }
 
-  newEvent!: IEvento;
+  newEvent!:IEvento;
 
-  inicializarEvento() {
-    this.newEvent = {
-      title: '',
-      description: '',
-      image: '',
-      price: 0,
-      date: new Date(''),
+  inicializarEvento(){
+    this.newEvent={
+      nombre:"",
+      descripcion:"",
+      imagen:"",
+      precio:0,
+      fecha:new Date("")
     };
   }
 
-  constructor(private eventosService: EventosService) {}
+  constructor(private eventosService:EventosService){}
 
-  @Output() eventoNuevo = new EventEmitter<IEvento>();
+  @Output() eventoNuevo=new EventEmitter<IEvento>();
 
-  addEvent() {
-    this.eventosService.addEvento(this.newEvent).subscribe((evento) => {
-      this.eventoNuevo.emit(evento);
-      this.inicializarEvento();
-    });
-    this.eventoNuevo.emit(this.newEvent);
-    this.inicializarEvento();
+  addEvent(){
+    this.eventosService.addEvento(this.newEvent).subscribe(
+      pepe=>{
+        this.eventoNuevo.emit(pepe);
+        this.inicializarEvento();
+      }
+    )
   }
 
   changeImage(fileInput: HTMLInputElement) {
+
     if (!fileInput.files || fileInput.files.length === 0) {
-      return;
+     return;
     }
 
     const reader: FileReader = new FileReader();
@@ -49,7 +51,9 @@ export class EventoAddComponent implements OnInit {
         this.newEvent.image = reader.result.toString();
       else
       this.newEvent.image = "";*/
-      this.newEvent.image = reader.result as string;
+      this.newEvent.imagen = reader.result as string;
     });
-  }
+
+   }
+
 }

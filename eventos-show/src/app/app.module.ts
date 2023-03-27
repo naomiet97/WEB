@@ -9,9 +9,9 @@ import { EventoItemComponent } from './evento-item/evento-item.component';
 import { EventoAddComponent } from './evento-add/evento-add.component';
 import { EventosService } from './servicios/eventos.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { BaseUrlInterceptor } from 'src/interceptores/base-url.interceptor';
-import { WelcComponent } from './welc/welc.component';
-import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+import { BaseUrlInterceptor } from './interceptores/base-url.interceptor';
+import { RouterModule } from '@angular/router';
+import { EventoDetalleComponent } from './evento-detalle/evento-detalle.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +20,9 @@ import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.co
     EventoFiltroPipe,
     EventoItemComponent,
     EventoAddComponent,
-    WelcComponent,
-    ProductoDetalleComponent,
+    EventoDetalleComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule],
   providers: [
     EventosService,
     {

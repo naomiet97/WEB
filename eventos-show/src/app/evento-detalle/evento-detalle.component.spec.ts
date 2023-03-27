@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WelcComponent } from './welc.component';
+import { EventoDetalleComponent } from './evento-detalle.component';
 
-describe('WelcComponent', () => {
-  let component: WelcComponent;
-  let fixture: ComponentFixture<WelcComponent>;
+describe('EventoDetalleComponent', () => {
+  let component: EventoDetalleComponent;
+  let fixture: ComponentFixture<EventoDetalleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WelcComponent ]
+      declarations: [ EventoDetalleComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WelcComponent);
+    fixture = TestBed.createComponent(EventoDetalleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

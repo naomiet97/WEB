@@ -3,20 +3,22 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor,
+  HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments';
+import { environment } from 'src/environment';
 
 @Injectable()
 export class BaseUrlInterceptor implements HttpInterceptor {
-  intercept(
-    request: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
-    const requestClonado = request.clone({
-      url: environment.baseUrl + '/' + request.url,
-    });
+
+
+
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const requestClonado=request.clone(
+      {
+        url: environment.baseUrl+"/"+ request.url
+      }
+    );
 
     return next.handle(requestClonado);
   }
